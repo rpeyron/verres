@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Vos verres</title>
+	<meta charset="UTF-8" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+	<div id="app" class="container" style="margin-top: 2em; margin-left: auto; margin-right: auto">
+		<div class="card text-center">
+			<div class="card-header">
+				<h1 class="display-1">Vos verres</h1>
+			</div>
+						<div class="card-body" >
+				<form>
+					<div class="form-floating">
+						<input id="correction" type="text" class="form-control"  placeholder="Correction"
+							style="text-align: center; width: 100%; "></input>
+							<label for="correction">Correction à normaliser</label>
+					</div>
+					<div text-align="center" width="100%" style="margin:0.5em"><i class="bi bi-arrow-down"></i></div>
+					<div  class="form-floating">
+						<input id="normal" type="text" class="form-control" disabled  placeholder="Formule normalisée"
+							style="text-align: center; width: 100%;"></input>
+						<label for="normal">Correction normalisée</label>
+					</div>
+					<br />
+					<div class="accordion" id="decomposition">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+									aria-expanded="true" aria-controls="collapseOne">
+									Details
+								</button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<table id="decomposition" width="100%">
+										<tr>
+											<th></th>
+											<th>Normalisée</th>
+											<th>Entrée</th>
+										</tr>
+										<tr>
+											<td>Sphère
+												<i class="bi bi-question-circle" data-toggle="tooltip"
+													title="Sphere principale (en dioptries, négatif = myope, positif = hypermétrope)"></i>
+												:</td>
+											<td><span id="sphere" /></td>
+											<td><span id="sphereIn" /></td>
+										</tr>
+										<tr>
+											<td>Cylindre
+												<i class="bi bi-question-circle" data-toggle="tooltip"
+													title="La présence d'un cylindre indique une astigmatie (en dioptries)"></i>
+												:</td>
+											<td><span id="cylindre" /></td>
+											<td><span id="cylindreIn" /></td>
+										</tr>
+										<tr>
+											<td>Angle
+												<i class="bi bi-question-circle" data-toggle="tooltip"
+													title="Orientation du cylindre pour la correction de l'astigmatie (en degrés)"></i>
+												:</td>
+											<td><span id="angle" /></td>
+											<td><span id="angleIn" /></td>
+										</tr>
+										<tr>
+											<td>Addition
+												<i class="bi bi-question-circle" data-toggle="tooltip"
+													title="Verres progressifs pour la presbitie, addition apportée à la sphère en zone de vision de près (en dioptries)"></i>
+												:</td>
+											<td><span id="addition" /></td>
+											<td><span id="additionIn" /></td>
+										</tr>
+										<tr>
+											<td>Moyenne
+												<i class="bi bi-question-circle" data-toggle="tooltip"
+													title="Valeur moyenne de la correction du verre en tenant compte de la correction pour l'astigmatie"></i>
+												:</td>
+											<td colspan="2"><span id="moyrefract" /></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="src/index.js">
+	</script>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<script>
+		// Activate tooltips
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
+</body>
+
+</html>

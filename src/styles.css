@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+
+table#decomposition {
+  width: 100%;
+}
+
+table#decomposition td:first-child {
+  text-align: right;
+  width: 40%;
+}
+
+table#decomposition td {
+  text-align: center;
+  width: 30%;
+}
