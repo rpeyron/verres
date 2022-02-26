@@ -48,7 +48,7 @@ function formatDioptrie(dio) {
   return (dio < 0 ? "" : "+") + dio.toFixed(2);
 }
 
-export function normalize(str, option) {
+/*export*/ function normalize(str, option) {
   var matches = str.match(re1);
   if (!matches) matches = str.match(re2);
 
@@ -144,7 +144,7 @@ function test(str, expected, option) {
   );
 }
 
-export function tests() {
+/*export*/ function tests() {
   // En cylindre positif
   test("-2.00", "-2.00");
   test("-2.00 (-1,25) 55°", "-3.25 (+1.25 à 145°)");
