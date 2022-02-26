@@ -1,5 +1,5 @@
-import "./styles.css";
-import { normalize, tests } from "./lens";
+//import "./styles.css";
+//import { normalize, tests } from "./lens";
 
 // UI -------------------------------------------
 
