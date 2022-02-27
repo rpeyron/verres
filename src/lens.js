@@ -5,6 +5,16 @@ References:
 
 */
 
+// Fonctions utiles pour Google Spreadsheets
+function ophtalmoNormalise(str) {
+  return normalize(str).normale
+}
+
+function ophtalmoMoyRefaction(str) {
+  return normalize(str).moyrefract
+}
+
+
 // Function -------------------------------------------
 
 var re_dioptrie = "[-+]?[.,\\d]+";
