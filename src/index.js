@@ -34,7 +34,7 @@ let actualize = () => {
     spanInAngle.innerText = ret.explain.in.angle;
     spanInAddition.innerText = ret.explain.in.addition;
   } else {
-    textNormalise.innerText = ret;
+    textNormalise.value = ret;
   }
 };
 
