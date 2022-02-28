@@ -9,23 +9,23 @@ References:
 
 // Fonctions utiles pour Google Spreadsheets
 function ophtalmoNormalise(str) {
-  return normalize(str).normale
+  return normalize(str).normale ?? normalize(str)
 }
 
-function ophtalmoMoyRefaction(str) {
-  return normalize(str).moyrefract
+function ophtalmoMoyRefraction(str) {
+  return normalize(str).moyrefract ?? normalize(str)
 }
 
 
 // Function -------------------------------------------
 
-var re_dioptrie = "[-+]?[.,\\d]+";
+var re_dioptrie = "[-+]?\\s*[.,\\d]+";
 var re_sphere = "\\s*(?<sphere>" + re_dioptrie + ")\\s*";
 var re_cylindre = "\\s*(?<cylindre>" + re_dioptrie + ")\\s*";
 var re_addition =
   "\\s*(Add.?|Addition)?\\s*(?<addition>" + re_dioptrie + ")?\\s*";
 
-var re_angle = "\\s*(?<angle>[-+]?\\d\\d\\d?)°?\\s*";
+var re_angle = "\\s*(?<angle>[-+]?\\d\\d?\\d?)°?\\s*";
 
 // Parenthèses en second : -2.00 (-1,25) 55°
 //var re1 = /(?<sphere>[-+.,\d]+)\s*(\(\s*(?<cylindre>[-+.,\d]*)\s*\)\s*(?<angle>[-+.\d]*)°)?\s*(Add.?|Addition)?\s*(?<addition>[-+.,\d]*)\s*/;
