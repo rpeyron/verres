@@ -43,6 +43,4 @@ Références :
 
 # Fonctions dans Google Spreadsheets
 
-Cette calculatrice est certes pratique, mais pas si vous souhaitez l’utiliser un grand nombre de fois. J’utilise d’habitude LibreOffice comme tableur, mais il ne semble pas qu’il permette d’intégrer facilement une nouvelle fonction en javascript. Or comme j’ai écrit le code ci-dessus en javascript, je n’ai pas envie de le réécrire en Basic de LibreOffice. Fort heureusement, Google Spreadsheet permet très simplement d’ajouter des fonctions en javascript.
-
 Dans un nouveau document Google Spreadsheet, cliquez sur Extensions / AppScripts. Puis dans l’éditeur de script qui s’est ouvert, copier le fichier disponible à cette adresse : https://github.com/rpeyron/verres/blob/main/src/lens.js  Et c’est tout ! Les fonctions =ophtalmoNormalise(correction) et =ophtalmoMoyRefraction(correction) sont maintenant disponibles.
